@@ -58,7 +58,7 @@ public class ConfigHelper extends BaseRemoteHelper {
     }
 
     private static List<News> getNews() {
-        Config config = getInstance().getConfig();
+        Config config = null;
         if (config == null || config.news == null) {
             return Collections.emptyList();
         }

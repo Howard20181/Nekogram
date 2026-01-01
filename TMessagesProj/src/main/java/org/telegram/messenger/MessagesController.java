@@ -731,7 +731,8 @@ public class MessagesController extends BaseController implements NotificationCe
         return !starsLocked;
     }
     public boolean premiumFeaturesBlocked() {
-        return premiumLocked && !getUserConfig().isPremium();
+        return false;
+//        return premiumLocked && !getUserConfig().isPremium();
     }
     public boolean premiumPurchaseBlocked() {
         return premiumLocked;
@@ -23153,6 +23154,7 @@ public class MessagesController extends BaseController implements NotificationCe
     public boolean isSponsoredDisabled() {
         TLRPC.UserFull userFull = getUserFull(getUserConfig().getClientUserId());
         if (userFull == null) return false;
+        if (userFull.sponsored_enabled) disableAds(false);
         return !userFull.sponsored_enabled;
     }
 

@@ -144,7 +144,7 @@ public class NekoConfig {
     public static boolean bottomFilterTabs = false;
     public static boolean strokeOnViews = true;
 
-    public static boolean shouldNOTTrustMe = false;
+    public static boolean shouldNOTTrustMe = true;
 
     public static int userMcc = 0;
 
@@ -191,7 +191,7 @@ public class NekoConfig {
             tabsTitleType = preferences.getInt("tabsTitleType2", TITLE_TYPE_MIX);
             confirmAVMessage = preferences.getBoolean("confirmAVMessage", false);
             askBeforeCall = preferences.getBoolean("askBeforeCall", true);
-            shouldNOTTrustMe = preferences.getBoolean("shouldNOTTrustMe", false);
+//            shouldNOTTrustMe = preferences.getBoolean("shouldNOTTrustMe", false);
             disableNumberRounding = preferences.getBoolean("disableNumberRounding", false);
             disableAppBarShadow = preferences.getBoolean("disableAppBarShadow", false);
             mediaPreview = preferences.getBoolean("mediaPreview", true);
